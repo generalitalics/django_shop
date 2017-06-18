@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--Custom styles-->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4, col-lg-offset-4">
+                    <h1 class="title">Наш магазин скоро откроется</h1>
+                    <h1 class="title">Оставляйте Ваш e-mail в форме ниже</h1>
+                    <div>
+                        <form action="" method="post">{%  csrf_token %}
+                            {{ form.as_p }}
+                            <div>
+                                <button type="submit" class="btn btn-primary">отправить</button>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
